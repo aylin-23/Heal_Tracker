@@ -1,255 +1,255 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Heal Tracker — Tu salud, sin complicaciones</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#F3F6F5;
-      --paper:#FFFFFF;
-      --ink:#1F2A28;
-      --ink-soft:#516059;
-      --primary:#0F5C4E;
-      --primary-dark:#0A4A3F;
-      --primary-soft:#DCEEE9;
-      --accent:#ED8B3F;
-      --accent-soft:#FCE7D3;
-      --danger:#C1443A;
-      --danger-soft:#F8DEDB;
-      --line:#DCE4E1;
-      --ad-bg:#F0EEE8;
-      --ad-border:#C9C2AE;
-      --radius:18px;
-      --radius-sm:12px;
-      --shadow: 0 4px 18px rgba(15,92,78,0.08);
-      --focus: 3px solid #1E7FD1;
-      font-size:18px;
-    }
-    *{box-sizing:border-box;}
-    html,body{margin:0;padding:0;}
-    body{
-      background:var(--bg);
-      color:var(--ink);
-      font-family:'Atkinson Hyperlegible', sans-serif;
-      line-height:1.5;
-      min-height:100vh;
-    }
-    h1,h2,h3,.brand,.big-btn span.label,.ring-center .ring-title{
-      font-family:'Baloo 2', sans-serif;
-    }
-    h1{font-size:2rem;margin:0 0 .3rem;}
-    h2{font-size:1.4rem;margin:0 0 .8rem;color:var(--primary-dark);}
-    h3{font-size:1.1rem;margin:0 0 .4rem;}
-    p{margin:.3rem 0;}
-    button{font-family:inherit;font-size:1rem;cursor:pointer;}
-    a{color:var(--primary-dark);}
-    input, select, textarea{
-      font-family:inherit;
-      font-size:1rem;
-      padding:.75rem .9rem;
-      border-radius:var(--radius-sm);
-      border:2px solid var(--line);
-      width:100%;
-      background:var(--paper);
-      color:var(--ink);
-    }
-    input:focus, select:focus, textarea:focus, button:focus-visible, [tabindex]:focus-visible{
-      outline: var(--focus);
-      outline-offset:2px;
-    }
-    label{font-weight:700;display:block;margin:.9rem 0 .3rem;font-size:.95rem;color:var(--ink);}
-    .hint{font-size:.85rem;color:var(--ink-soft);margin-top:-.15rem;}
-    fieldset{border:none;padding:0;margin:0;}
-    legend{font-family:'Baloo 2';font-size:1.15rem;color:var(--primary-dark);padding:0;margin-bottom:.3rem;}
-    [hidden]{display:none !important;}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Heal Tracker — Tu salud, sin complicaciones</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F3F6F5;
+    --paper:#FFFFFF;
+    --ink:#1F2A28;
+    --ink-soft:#516059;
+    --primary:#0F5C4E;
+    --primary-dark:#0A4A3F;
+    --primary-soft:#DCEEE9;
+    --accent:#ED8B3F;
+    --accent-soft:#FCE7D3;
+    --danger:#C1443A;
+    --danger-soft:#F8DEDB;
+    --line:#DCE4E1;
+    --ad-bg:#F0EEE8;
+    --ad-border:#C9C2AE;
+    --radius:18px;
+    --radius-sm:12px;
+    --shadow: 0 4px 18px rgba(15,92,78,0.08);
+    --focus: 3px solid #1E7FD1;
+    font-size:18px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Atkinson Hyperlegible', sans-serif;
+    line-height:1.5;
+    min-height:100vh;
+  }
+  h1,h2,h3,.brand,.big-btn span.label,.ring-center .ring-title{
+    font-family:'Baloo 2', sans-serif;
+  }
+  h1{font-size:2rem;margin:0 0 .3rem;}
+  h2{font-size:1.4rem;margin:0 0 .8rem;color:var(--primary-dark);}
+  h3{font-size:1.1rem;margin:0 0 .4rem;}
+  p{margin:.3rem 0;}
+  button{font-family:inherit;font-size:1rem;cursor:pointer;}
+  a{color:var(--primary-dark);}
+  input, select, textarea{
+    font-family:inherit;
+    font-size:1rem;
+    padding:.75rem .9rem;
+    border-radius:var(--radius-sm);
+    border:2px solid var(--line);
+    width:100%;
+    background:var(--paper);
+    color:var(--ink);
+  }
+  input:focus, select:focus, textarea:focus, button:focus-visible, [tabindex]:focus-visible{
+    outline: var(--focus);
+    outline-offset:2px;
+  }
+  label{font-weight:700;display:block;margin:.9rem 0 .3rem;font-size:.95rem;color:var(--ink);}
+  .hint{font-size:.85rem;color:var(--ink-soft);margin-top:-.15rem;}
+  fieldset{border:none;padding:0;margin:0;}
+  legend{font-family:'Baloo 2';font-size:1.15rem;color:var(--primary-dark);padding:0;margin-bottom:.3rem;}
+  [hidden]{display:none !important;}
 
-    /* ---------- Botones ---------- */
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
-      padding:.9rem 1.4rem;border-radius:999px;border:2px solid transparent;
-      font-weight:700;transition:transform .12s ease, box-shadow .12s ease;
+  /* ---------- Botones ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+    padding:.9rem 1.4rem;border-radius:999px;border:2px solid transparent;
+    font-weight:700;transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .btn:active{transform:scale(.97);}
+  .btn-primary{background:var(--primary);color:#fff;}
+  .btn-primary:hover{background:var(--primary-dark);}
+  .btn-accent{background:var(--accent);color:#3a2205;}
+  .btn-accent:hover{filter:brightness(0.95);}
+  .btn-outline{background:transparent;border-color:var(--primary);color:var(--primary-dark);}
+  .btn-outline:hover{background:var(--primary-soft);}
+  .btn-danger{background:var(--danger);color:#fff;}
+  .btn-text{background:none;border:none;color:var(--primary-dark);text-decoration:underline;font-weight:700;padding:.4rem;}
+  .btn-block{width:100%;}
+  .btn-lg{padding:1.1rem 1.6rem;font-size:1.1rem;}
+
+  /* ---------- Pantalla de bienvenida ---------- */
+  #screen-welcome{
+    min-height:100vh;display:flex;align-items:center;justify-content:center;
+    padding:2rem 1rem;
+    background:
+      radial-gradient(circle at 15% 20%, var(--primary-soft) 0%, transparent 45%),
+      radial-gradient(circle at 85% 80%, var(--accent-soft) 0%, transparent 40%),
+      var(--bg);
+  }
+  .welcome-card{
+    background:var(--paper);border-radius:24px;box-shadow:var(--shadow);
+    max-width:460px;width:100%;padding:2.2rem 2rem;
+  }
+  .brand{display:flex;align-items:center;gap:.6rem;margin-bottom:.4rem;}
+  .brand .logo{
+    width:46px;height:46px;border-radius:14px;background:var(--primary);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .brand .logo svg{width:26px;height:26px;}
+  .brand-name{font-size:1.5rem;font-weight:700;color:var(--primary-dark);}
+  .tagline{color:var(--ink-soft);margin-bottom:1.4rem;}
+  .tabs{display:flex;background:var(--bg);border-radius:999px;padding:4px;margin-bottom:1.2rem;}
+  .tab-btn{flex:1;border:none;background:none;padding:.7rem;border-radius:999px;font-weight:700;color:var(--ink-soft);}
+  .tab-btn.active{background:var(--primary);color:#fff;}
+  .form-error{background:var(--danger-soft);color:var(--danger);padding:.7rem 1rem;border-radius:var(--radius-sm);margin:.7rem 0;font-weight:700;font-size:.9rem;}
+  .form-success{background:var(--primary-soft);color:var(--primary-dark);padding:.7rem 1rem;border-radius:var(--radius-sm);margin:.7rem 0;font-weight:700;font-size:.9rem;}
+  .checkbox-row{display:flex;align-items:flex-start;gap:.6rem;margin-top:.9rem;}
+  .checkbox-row input{width:22px;height:22px;flex-shrink:0;margin-top:.15rem;}
+  .checkbox-row label{margin:0;font-weight:400;}
+  .field-row{display:flex;gap:.8rem;}
+  .field-row > div{flex:1;}
+  .step-indicator{display:flex;gap:.4rem;justify-content:center;margin-bottom:1.2rem;}
+  .step-dot{width:10px;height:10px;border-radius:50%;background:var(--line);}
+  .step-dot.active{background:var(--accent);width:26px;border-radius:6px;}
+
+  /* ---------- App shell ---------- */
+  #screen-app{display:flex;min-height:100vh;}
+  .sidenav{
+    width:230px;flex-shrink:0;background:var(--primary-dark);color:#fff;
+    display:flex;flex-direction:column;padding:1.4rem 1rem;gap:.3rem;
+  }
+  .sidenav .brand{color:#fff;margin-bottom:1.6rem;padding-left:.3rem;}
+  .sidenav .brand-name{color:#fff;font-size:1.3rem;}
+  .sidenav .logo{background:#fff;}
+  .sidenav .logo svg path, .sidenav .logo svg circle{stroke:var(--primary-dark);}
+  .nav-item{
+    display:flex;align-items:center;gap:.8rem;padding:.85rem 1rem;border-radius:14px;
+    color:#DCEEE9;background:none;border:none;text-align:left;font-weight:700;font-size:1rem;width:100%;
+  }
+  .nav-item svg{width:24px;height:24px;flex-shrink:0;}
+  .nav-item:hover{background:rgba(255,255,255,.08);}
+  .nav-item.active{background:var(--accent);color:#3a2205;}
+  .nav-spacer{flex:1;}
+  .sidenav .logout{margin-top:.5rem;}
+  .ad-slot-side{
+    margin-top:1.2rem;background:var(--ad-bg);border:1.5px dashed var(--ad-border);
+    border-radius:14px;padding:.9rem;color:#4A4636;
+  }
+  .ad-slot-side .ad-tag{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:#8A7E5E;display:block;margin-bottom:.4rem;}
+  .ad-slot-side img{width:100%;border-radius:8px;margin:.4rem 0;display:block;}
+  .ad-slot-side .ad-cta{font-size:.85rem;color:var(--primary-dark);font-weight:700;}
+
+  main{flex:1;min-width:0;padding:2rem 2.4rem 6rem;}
+  .topbar-mobile{display:none;}
+  .bottomnav{display:none;}
+
+  .view-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:1.6rem;}
+  .greeting{color:var(--ink-soft);}
+  .card{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.4rem 1.5rem;}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+
+  /* Anillo de bienestar (elemento firma) */
+  .wellness-hub{display:flex;align-items:center;gap:2rem;flex-wrap:wrap;}
+  .ring-wrap{position:relative;width:190px;height:190px;flex-shrink:0;}
+  .ring-wrap svg{transform:rotate(-90deg);}
+  .ring-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+  .ring-center .ring-title{font-size:1.6rem;font-weight:700;color:var(--primary-dark);}
+  .ring-center .ring-sub{font-size:.8rem;color:var(--ink-soft);}
+  .hub-legend{flex:1;min-width:220px;display:flex;flex-direction:column;gap:.7rem;}
+  .hub-legend-item{display:flex;align-items:center;gap:.6rem;padding:.6rem .8rem;border-radius:12px;background:var(--bg);}
+  .dot{width:14px;height:14px;border-radius:50%;flex-shrink:0;}
+
+  .quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:1.6rem;}
+  .big-btn{
+    background:var(--paper);border:2px solid var(--line);border-radius:var(--radius);
+    padding:1.4rem 1rem;display:flex;flex-direction:column;align-items:center;gap:.6rem;
+    box-shadow:var(--shadow); transition:border-color .12s, transform .12s;
+  }
+  .big-btn:hover{border-color:var(--primary);transform:translateY(-2px);}
+  .big-btn .icon-wrap{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;}
+  .big-btn .icon-wrap svg{width:30px;height:30px;}
+  .big-btn span.label{font-size:1.05rem;color:var(--ink);}
+  .big-btn span.sub{font-size:.8rem;color:var(--ink-soft);text-align:center;}
+
+  .list-item{
+    display:flex;justify-content:space-between;align-items:center;gap:1rem;
+    padding:1rem 1.1rem;border-radius:14px;background:var(--bg);margin-bottom:.7rem;
+    flex-wrap:wrap;
+  }
+  .list-item strong{display:block;}
+  .list-item .meta{color:var(--ink-soft);font-size:.9rem;}
+  .badge{padding:.25rem .7rem;border-radius:999px;font-size:.78rem;font-weight:700;}
+  .badge-upcoming{background:var(--primary-soft);color:var(--primary-dark);}
+  .badge-past{background:var(--line);color:var(--ink-soft);}
+  .badge-med{background:var(--accent-soft);color:#7A4413;}
+
+  .toast-wrap{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;display:flex;flex-direction:column;gap:.6rem;max-width:340px;}
+  .toast{background:var(--primary-dark);color:#fff;padding:1rem 1.2rem;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,.2);display:flex;gap:.7rem;align-items:flex-start;animation:slidein .25s ease;}
+  .toast.accent{background:var(--accent);color:#3a2205;}
+  .toast button{background:none;border:none;color:inherit;font-weight:700;font-size:1.1rem;line-height:1;}
+  @keyframes slidein{from{transform:translateX(30px);opacity:0;}to{transform:translateX(0);opacity:1;}}
+
+  .section-title-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:.6rem;}
+
+  .ad-banner{
+    background:var(--ad-bg);border:1.5px dashed var(--ad-border);border-radius:var(--radius);
+    padding:1rem 1.2rem;margin:1.6rem 0;display:flex;align-items:center;gap:1rem;color:#4A4636;
+  }
+  .ad-banner .ad-tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;font-weight:700;color:#8A7E5E;}
+
+  .map-embed{width:100%;height:380px;border:0;border-radius:var(--radius);}
+  .clinic-card{display:flex;justify-content:space-between;align-items:center;background:var(--bg);padding:1rem;border-radius:14px;margin-bottom:.7rem;flex-wrap:wrap;gap:.6rem;}
+
+  .profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem;}
+  .profile-field{padding:.9rem 1rem;background:var(--bg);border-radius:12px;}
+  .profile-field .k{font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft);font-weight:700;}
+  .profile-field .v{font-size:1.05rem;margin-top:.15rem;}
+
+  .modal-overlay{position:fixed;inset:0;background:rgba(15,30,25,.45);display:flex;align-items:center;justify-content:center;z-index:1000;padding:1rem;}
+  .modal{background:var(--paper);border-radius:20px;max-width:520px;width:100%;padding:1.8rem;max-height:88vh;overflow-y:auto;}
+  .modal-close-row{display:flex;justify-content:flex-end;}
+
+  footer.legal{font-size:.78rem;color:var(--ink-soft);margin-top:2.4rem;padding-top:1rem;border-top:1px solid var(--line);}
+
+  @media (max-width: 980px){
+    .grid-2{grid-template-columns:1fr;}
+    .quick-grid{grid-template-columns:repeat(2,1fr);}
+    .profile-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width: 760px){
+    .sidenav{display:none;}
+    #screen-app{flex-direction:column;}
+    .topbar-mobile{
+      display:flex;align-items:center;justify-content:space-between;
+      background:var(--primary-dark);color:#fff;padding:1rem 1.2rem;position:sticky;top:0;z-index:50;
     }
-    .btn:active{transform:scale(.97);}
-    .btn-primary{background:var(--primary);color:#fff;}
-    .btn-primary:hover{background:var(--primary-dark);}
-    .btn-accent{background:var(--accent);color:#3a2205;}
-    .btn-accent:hover{filter:brightness(0.95);}
-    .btn-outline{background:transparent;border-color:var(--primary);color:var(--primary-dark);}
-    .btn-outline:hover{background:var(--primary-soft);}
-    .btn-danger{background:var(--danger);color:#fff;}
-    .btn-text{background:none;border:none;color:var(--primary-dark);text-decoration:underline;font-weight:700;padding:.4rem;}
-    .btn-block{width:100%;}
-    .btn-lg{padding:1.1rem 1.6rem;font-size:1.1rem;}
-
-    /* ---------- Pantalla de bienvenida ---------- */
-    #screen-welcome{
-      min-height:100vh;display:flex;align-items:center;justify-content:center;
-      padding:2rem 1rem;
-      background:
-              radial-gradient(circle at 15% 20%, var(--primary-soft) 0%, transparent 45%),
-              radial-gradient(circle at 85% 80%, var(--accent-soft) 0%, transparent 40%),
-              var(--bg);
+    .topbar-mobile .brand-name{color:#fff;font-size:1.15rem;}
+    main{padding:1.2rem 1rem 6rem;}
+    .bottomnav{
+      display:flex;position:fixed;bottom:0;left:0;right:0;background:var(--paper);
+      border-top:1px solid var(--line);z-index:60;padding:.4rem;
     }
-    .welcome-card{
-      background:var(--paper);border-radius:24px;box-shadow:var(--shadow);
-      max-width:460px;width:100%;padding:2.2rem 2rem;
+    .bottomnav button{
+      flex:1;display:flex;flex-direction:column;align-items:center;gap:.15rem;
+      background:none;border:none;color:var(--ink-soft);font-size:.68rem;font-weight:700;padding:.4rem 0;border-radius:10px;
     }
-    .brand{display:flex;align-items:center;gap:.6rem;margin-bottom:.4rem;}
-    .brand .logo{
-      width:46px;height:46px;border-radius:14px;background:var(--primary);
-      display:flex;align-items:center;justify-content:center;flex-shrink:0;
-    }
-    .brand .logo svg{width:26px;height:26px;}
-    .brand-name{font-size:1.5rem;font-weight:700;color:var(--primary-dark);}
-    .tagline{color:var(--ink-soft);margin-bottom:1.4rem;}
-    .tabs{display:flex;background:var(--bg);border-radius:999px;padding:4px;margin-bottom:1.2rem;}
-    .tab-btn{flex:1;border:none;background:none;padding:.7rem;border-radius:999px;font-weight:700;color:var(--ink-soft);}
-    .tab-btn.active{background:var(--primary);color:#fff;}
-    .form-error{background:var(--danger-soft);color:var(--danger);padding:.7rem 1rem;border-radius:var(--radius-sm);margin:.7rem 0;font-weight:700;font-size:.9rem;}
-    .form-success{background:var(--primary-soft);color:var(--primary-dark);padding:.7rem 1rem;border-radius:var(--radius-sm);margin:.7rem 0;font-weight:700;font-size:.9rem;}
-    .checkbox-row{display:flex;align-items:flex-start;gap:.6rem;margin-top:.9rem;}
-    .checkbox-row input{width:22px;height:22px;flex-shrink:0;margin-top:.15rem;}
-    .checkbox-row label{margin:0;font-weight:400;}
-    .field-row{display:flex;gap:.8rem;}
-    .field-row > div{flex:1;}
-    .step-indicator{display:flex;gap:.4rem;justify-content:center;margin-bottom:1.2rem;}
-    .step-dot{width:10px;height:10px;border-radius:50%;background:var(--line);}
-    .step-dot.active{background:var(--accent);width:26px;border-radius:6px;}
-
-    /* ---------- App shell ---------- */
-    #screen-app{display:flex;min-height:100vh;}
-    .sidenav{
-      width:230px;flex-shrink:0;background:var(--primary-dark);color:#fff;
-      display:flex;flex-direction:column;padding:1.4rem 1rem;gap:.3rem;
-    }
-    .sidenav .brand{color:#fff;margin-bottom:1.6rem;padding-left:.3rem;}
-    .sidenav .brand-name{color:#fff;font-size:1.3rem;}
-    .sidenav .logo{background:#fff;}
-    .sidenav .logo svg path, .sidenav .logo svg circle{stroke:var(--primary-dark);}
-    .nav-item{
-      display:flex;align-items:center;gap:.8rem;padding:.85rem 1rem;border-radius:14px;
-      color:#DCEEE9;background:none;border:none;text-align:left;font-weight:700;font-size:1rem;width:100%;
-    }
-    .nav-item svg{width:24px;height:24px;flex-shrink:0;}
-    .nav-item:hover{background:rgba(255,255,255,.08);}
-    .nav-item.active{background:var(--accent);color:#3a2205;}
-    .nav-spacer{flex:1;}
-    .sidenav .logout{margin-top:.5rem;}
-    .ad-slot-side{
-      margin-top:1.2rem;background:var(--ad-bg);border:1.5px dashed var(--ad-border);
-      border-radius:14px;padding:.9rem;color:#4A4636;
-    }
-    .ad-slot-side .ad-tag{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:#8A7E5E;display:block;margin-bottom:.4rem;}
-    .ad-slot-side img{width:100%;border-radius:8px;margin:.4rem 0;display:block;}
-    .ad-slot-side .ad-cta{font-size:.85rem;color:var(--primary-dark);font-weight:700;}
-
-    main{flex:1;min-width:0;padding:2rem 2.4rem 6rem;}
-    .topbar-mobile{display:none;}
-    .bottomnav{display:none;}
-
-    .view-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:1.6rem;}
-    .greeting{color:var(--ink-soft);}
-    .card{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.4rem 1.5rem;}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
-
-    /* Anillo de bienestar */
-    .wellness-hub{display:flex;align-items:center;gap:2rem;flex-wrap:wrap;}
-    .ring-wrap{position:relative;width:190px;height:190px;flex-shrink:0;}
-    .ring-wrap svg{transform:rotate(-90deg);}
-    .ring-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
-    .ring-center .ring-title{font-size:1.6rem;font-weight:700;color:var(--primary-dark);}
-    .ring-center .ring-sub{font-size:.8rem;color:var(--ink-soft);}
-    .hub-legend{flex:1;min-width:220px;display:flex;flex-direction:column;gap:.7rem;}
-    .hub-legend-item{display:flex;align-items:center;gap:.6rem;padding:.6rem .8rem;border-radius:12px;background:var(--bg);}
-    .dot{width:14px;height:14px;border-radius:50%;flex-shrink:0;}
-
-    .quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:1.6rem;}
-    .big-btn{
-      background:var(--paper);border:2px solid var(--line);border-radius:var(--radius);
-      padding:1.4rem 1rem;display:flex;flex-direction:column;align-items:center;gap:.6rem;
-      box-shadow:var(--shadow); transition:border-color .12s, transform .12s;
-    }
-    .big-btn:hover{border-color:var(--primary);transform:translateY(-2px);}
-    .big-btn .icon-wrap{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;}
-    .big-btn .icon-wrap svg{width:30px;height:30px;}
-    .big-btn span.label{font-size:1.05rem;color:var(--ink);}
-    .big-btn span.sub{font-size:.8rem;color:var(--ink-soft);text-align:center;}
-
-    .list-item{
-      display:flex;justify-content:space-between;align-items:center;gap:1rem;
-      padding:1rem 1.1rem;border-radius:14px;background:var(--bg);margin-bottom:.7rem;
-      flex-wrap:wrap;
-    }
-    .list-item strong{display:block;}
-    .list-item .meta{color:var(--ink-soft);font-size:.9rem;}
-    .badge{padding:.25rem .7rem;border-radius:999px;font-size:.78rem;font-weight:700;}
-    .badge-upcoming{background:var(--primary-soft);color:var(--primary-dark);}
-    .badge-past{background:var(--line);color:var(--ink-soft);}
-    .badge-med{background:var(--accent-soft);color:#7A4413;}
-
-    .toast-wrap{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;display:flex;flex-direction:column;gap:.6rem;max-width:340px;}
-    .toast{background:var(--primary-dark);color:#fff;padding:1rem 1.2rem;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,.2);display:flex;gap:.7rem;align-items:flex-start;animation:slidein .25s ease;}
-    .toast.accent{background:var(--accent);color:#3a2205;}
-    .toast button{background:none;border:none;color:inherit;font-weight:700;font-size:1.1rem;line-height:1;}
-    @keyframes slidein{from{transform:translateX(30px);opacity:0;}to{transform:translateX(0);opacity:1;}}
-
-    .section-title-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:.6rem;}
-
-    .ad-banner{
-      background:var(--ad-bg);border:1.5px dashed var(--ad-border);border-radius:var(--radius);
-      padding:1rem 1.2rem;margin:1.6rem 0;display:flex;align-items:center;gap:1rem;color:#4A4636;
-    }
-    .ad-banner .ad-tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;font-weight:700;color:#8A7E5E;}
-
-    .map-embed{width:100%;height:380px;border:0;border-radius:var(--radius);}
-    .clinic-card{display:flex;justify-content:space-between;align-items:center;background:var(--bg);padding:1rem;border-radius:14px;margin-bottom:.7rem;flex-wrap:wrap;gap:.6rem;}
-
-    .profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem;}
-    .profile-field{padding:.9rem 1rem;background:var(--bg);border-radius:12px;}
-    .profile-field .k{font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft);font-weight:700;}
-    .profile-field .v{font-size:1.05rem;margin-top:.15rem;}
-
-    .modal-overlay{position:fixed;inset:0;background:rgba(15,30,25,.45);display:flex;align-items:center;justify-content:center;z-index:1000;padding:1rem;}
-    .modal{background:var(--paper);border-radius:20px;max-width:520px;width:100%;padding:1.8rem;max-height:88vh;overflow-y:auto;}
-    .modal-close-row{display:flex;justify-content:flex-end;}
-
-    footer.legal{font-size:.78rem;color:var(--ink-soft);margin-top:2.4rem;padding-top:1rem;border-top:1px solid var(--line);}
-
-    @media (max-width: 980px){
-      .grid-2{grid-template-columns:1fr;}
-      .quick-grid{grid-template-columns:repeat(2,1fr);}
-      .profile-grid{grid-template-columns:1fr;}
-    }
-    @media (max-width: 760px){
-      .sidenav{display:none;}
-      #screen-app{flex-direction:column;}
-      .topbar-mobile{
-        display:flex;align-items:center;justify-content:space-between;
-        background:var(--primary-dark);color:#fff;padding:1rem 1.2rem;position:sticky;top:0;z-index:50;
-      }
-      .topbar-mobile .brand-name{color:#fff;font-size:1.15rem;}
-      main{padding:1.2rem 1rem 6rem;}
-      .bottomnav{
-        display:flex;position:fixed;bottom:0;left:0;right:0;background:var(--paper);
-        border-top:1px solid var(--line);z-index:60;padding:.4rem;
-      }
-      .bottomnav button{
-        flex:1;display:flex;flex-direction:column;align-items:center;gap:.15rem;
-        background:none;border:none;color:var(--ink-soft);font-size:.68rem;font-weight:700;padding:.4rem 0;border-radius:10px;
-      }
-      .bottomnav button svg{width:22px;height:22px;}
-      .bottomnav button.active{color:var(--primary-dark);background:var(--primary-soft);}
-      .wellness-hub{justify-content:center;text-align:center;}
-      .toast-wrap{right:.8rem;left:.8rem;max-width:none;}
-    }
-    @media (prefers-reduced-motion: reduce){
-      *{animation:none !important; transition:none !important;}
-    }
-  </style>
+    .bottomnav button svg{width:22px;height:22px;}
+    .bottomnav button.active{color:var(--primary-dark);background:var(--primary-soft);}
+    .wellness-hub{justify-content:center;text-align:center;}
+    .toast-wrap{right:.8rem;left:.8rem;max-width:none;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+</style>
 </head>
 <body>
 
@@ -283,7 +283,7 @@
       <p class="hint" style="text-align:center;">Modo demo: usa <strong>demo@healtracker.mx</strong> / <strong>demo1234</strong></p>
     </form>
 
-    <!-- REGISTRO -->
+    <!-- REGISTRO (multi-paso para no abrumar) -->
     <form id="form-register" hidden onsubmit="handleRegisterSubmit(event)">
       <div class="step-indicator">
         <div class="step-dot active" data-step="1"></div>
@@ -301,8 +301,6 @@
         <input type="email" id="reg-email" required placeholder="tunombre@correo.com">
         <label for="reg-pass">Crea una contraseña</label>
         <input type="password" id="reg-pass" required minlength="6" placeholder="Mínimo 6 caracteres">
-        <label for="reg-pass-confirm">Confirmar contraseña</label>
-        <input type="password" id="reg-pass-confirm" required minlength="6" placeholder="Repite tu contraseña">
       </div>
 
       <div class="reg-step" data-step="2" hidden>
@@ -559,7 +557,7 @@
           <button class="btn btn-primary" onclick="buscarEnMapa()">Buscar</button>
         </div>
         <iframe id="mapa-iframe" class="map-embed" style="margin-top:1rem;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                src="https://maps.google.com/maps?q=farmacias%20y%20consultorios%20cerca%20de%20Ciudad%20de%20M%C3%A9xico&t=&z=13&ie=UTF8&iwloc=&output=embed">
+          src="https://maps.google.com/maps?q=farmacias%20y%20consultorios%20cerca%20de%20Ciudad%20de%20M%C3%A9xico&t=&z=13&ie=UTF8&iwloc=&output=embed">
         </iframe>
         <p class="hint">Este mapa usa Google Maps. En una app publicada, se centraría automáticamente en tu ubicación con tu permiso.</p>
       </div>
@@ -705,426 +703,384 @@
 <div class="toast-wrap" id="toast-wrap"></div>
 
 <script>
-  const API = '';
-  let currentUser = null;
-  let regStep = 1;
-  let waterTimer = null;
-  let medCheckTimer = null;
+/* =========================================================
+   HEAL TRACKER — lógica del frontend, conectada al backend real.
+   Todas las funciones que antes tocaban un objeto `db` en memoria
+   ahora llaman a la API en /api/... del servidor (server.js + db.js).
+   El token de sesión se guarda en localStorage para no tener que
+   iniciar sesión otra vez cada vez que recargas la página.
+   ========================================================= */
 
-  function getToken(){ return localStorage.getItem('healtracker_token'); }
-  function setToken(t){ localStorage.setItem('healtracker_token', t); }
-  function clearToken(){ localStorage.removeItem('healtracker_token'); }
+const API = ''; // mismo origen (el backend sirve también este archivo)
+let currentUser = null;
+let regStep = 1;
+let waterTimer = null;
+let medCheckTimer = null;
 
-  async function api(path, options = {}){
-    const headers = Object.assign({ 'Content-Type': 'application/json' }, options.headers || {});
-    const token = getToken();
-    if(token) headers['Authorization'] = 'Bearer ' + token;
-    const res = await fetch(API + path, Object.assign({}, options, { headers }));
-    let data = {};
-    try { data = await res.json(); } catch(e) { }
-    if(!res.ok){
-      throw new Error(data.error || 'Ocurrió un error inesperado. Intenta de nuevo.');
-    }
-    return data;
+function getToken(){ return localStorage.getItem('healtracker_token'); }
+function setToken(t){ localStorage.setItem('healtracker_token', t); }
+function clearToken(){ localStorage.removeItem('healtracker_token'); }
+
+async function api(path, options = {}){
+  const headers = Object.assign({ 'Content-Type': 'application/json' }, options.headers || {});
+  const token = getToken();
+  if(token) headers['Authorization'] = 'Bearer ' + token;
+  const res = await fetch(API + path, Object.assign({}, options, { headers }));
+  let data = {};
+  try { data = await res.json(); } catch(e) { /* respuesta sin cuerpo */ }
+  if(!res.ok){
+    throw new Error(data.error || 'Ocurrió un error inesperado. Intenta de nuevo.');
   }
+  return data;
+}
 
-  window.addEventListener('DOMContentLoaded', async () => {
-    const today = new Date().toISOString().split('T')[0];
-    const citaFecha = document.getElementById('cita-fecha');
-    if(citaFecha) citaFecha.min = today;
+/* ---------------- Arranque: ¿ya había una sesión guardada? ---------------- */
+window.addEventListener('DOMContentLoaded', async () => {
+  const today = new Date().toISOString().split('T')[0];
+  const citaFecha = document.getElementById('cita-fecha');
+  if(citaFecha) citaFecha.min = today;
 
-    if(getToken()){
-      try{
-        const { user } = await api('/api/me');
-        currentUser = user;
-        enterApp();
-      }catch(e){
-        clearToken();
-      }
-    }
-    renderClinicas('Ciudad de México');
-  });
-
-  function showAuthTab(tab){
-    document.getElementById('tab-login-btn').classList.toggle('active', tab==='login');
-    document.getElementById('tab-register-btn').classList.toggle('active', tab==='register');
-    document.getElementById('tab-login-btn').setAttribute('aria-selected', tab==='login');
-    document.getElementById('tab-register-btn').setAttribute('aria-selected', tab==='register');
-    document.getElementById('form-login').hidden = tab!=='login';
-    document.getElementById('form-register').hidden = tab!=='register';
-  }
-
-  async function handleLogin(e){
-    e.preventDefault();
-    const email = document.getElementById('login-email').value.trim().toLowerCase();
-    const pass = document.getElementById('login-pass').value;
-    const errorBox = document.getElementById('login-error');
-    errorBox.innerHTML = '';
+  if(getToken()){
     try{
-      const { token, user } = await api('/api/auth/login', {
-        method: 'POST',
-        body: JSON.stringify({ email, password: pass })
-      });
-      setToken(token);
+      const { user } = await api('/api/me');
       currentUser = user;
       enterApp();
-    }catch(err){
-      errorBox.innerHTML = '<div class="form-error">' + err.message + '</div>';
+    }catch(e){
+      clearToken();
     }
   }
+  renderClinicas('Ciudad de México');
+});
 
-  function enterApp(){
-    document.getElementById('screen-welcome').hidden = true;
-    document.getElementById('screen-app').hidden = false;
-    navigate('home');
-    startWaterReminders();
-    startMedChecks();
-  }
+/* ---------------- AUTENTICACIÓN ---------------- */
+function showAuthTab(tab){
+  document.getElementById('tab-login-btn').classList.toggle('active', tab==='login');
+  document.getElementById('tab-register-btn').classList.toggle('active', tab==='register');
+  document.getElementById('tab-login-btn').setAttribute('aria-selected', tab==='login');
+  document.getElementById('tab-register-btn').setAttribute('aria-selected', tab==='register');
+  document.getElementById('form-login').hidden = tab!=='login';
+  document.getElementById('form-register').hidden = tab!=='register';
+}
 
-  async function handleLogout(){
-    try{ await api('/api/auth/logout', { method: 'POST' }); }catch(e){ }
-    clearToken();
-    currentUser = null;
-    clearInterval(waterTimer);
-    clearInterval(medCheckTimer);
-    document.getElementById('screen-app').hidden = true;
-    document.getElementById('screen-welcome').hidden = false;
-    document.getElementById('form-login').reset();
-    showAuthTab('login');
-  }
-
-  function toggleNSS(){
-    const noNss = document.getElementById('reg-no-nss').checked;
-    const nssInput = document.getElementById('reg-nss');
-    nssInput.disabled = noNss;
-    if(noNss) nssInput.value='';
-  }
-
-  function regChangeStep(dir){
-    const steps = document.querySelectorAll('.reg-step');
-    const errorBox = document.getElementById('register-error');
-    errorBox.innerHTML = '';
-
-    if(dir === 1){
-      const currentStepEl = document.querySelector('.reg-step[data-step="'+regStep+'"]');
-      const inputs = currentStepEl.querySelectorAll('input[required], select[required]');
-      for(const inp of inputs){
-        if(!inp.value){
-          errorBox.innerHTML = '<div class="form-error">Por favor completa los campos marcados antes de continuar.</div>';
-          inp.focus();
-          return;
-        }
-      }
-
-      if (regStep === 1) {
-        const pass = document.getElementById('reg-pass').value;
-        const passConfirm = document.getElementById('reg-pass-confirm').value;
-        const phone = document.getElementById('reg-phone').value;
-
-        if (pass.length < 6) {
-          errorBox.innerHTML = '<div class="form-error">La contraseña debe tener al menos 6 caracteres.</div>';
-          document.getElementById('reg-pass').focus();
-          return;
-        }
-
-        if (pass !== passConfirm) {
-          errorBox.innerHTML = '<div class="form-error">Las contraseñas no coinciden. Inténtalo de nuevo.</div>';
-          document.getElementById('reg-pass-confirm').focus();
-          return;
-        }
-
-        const phoneClean = phone.replace(/[\s-]/g, '');
-        const phoneRegex = /^[0-9]{10,}$/;
-        if (!phoneRegex.test(phoneClean)) {
-          errorBox.innerHTML = '<div class="form-error">Por favor ingresa un número de teléfono válido (mínimo 10 dígitos).</div>';
-          document.getElementById('reg-phone').focus();
-          return;
-        }
-      }
-    }
-
-    regStep += dir;
-    if(regStep < 1) regStep = 1;
-    if(regStep > 3) regStep = 3;
-
-    steps.forEach(s => s.hidden = (parseInt(s.dataset.step) !== regStep));
-    document.querySelectorAll('.step-dot').forEach(d => d.classList.toggle('active', parseInt(d.dataset.step) === regStep));
-    document.getElementById('reg-back-btn').hidden = regStep === 1;
-    document.getElementById('reg-next-btn').hidden = regStep === 3;
-    document.getElementById('reg-submit-btn').hidden = regStep !== 3;
-  }
-
-  function resetRegisterWizard(){
-    regStep = 1;
-    document.querySelectorAll('.reg-step').forEach(s => s.hidden = parseInt(s.dataset.step) !== 1);
-    document.querySelectorAll('.step-dot').forEach(d => d.classList.toggle('active', parseInt(d.dataset.step) === 1));
-    document.getElementById('reg-back-btn').hidden = true;
-    document.getElementById('reg-next-btn').hidden = false;
-    document.getElementById('reg-submit-btn').hidden = true;
-  }
-
-  async function handleRegisterSubmit(e){
-    e.preventDefault();
-    const errorBox = document.getElementById('register-error');
-    errorBox.innerHTML = '';
-    const noNss = document.getElementById('reg-no-nss').checked;
-
-    const payload = {
-      fullName: document.getElementById('reg-name').value.trim(),
-      phone: document.getElementById('reg-phone').value.trim(),
-      email: document.getElementById('reg-email').value.trim().toLowerCase(),
-      password: document.getElementById('reg-pass').value,
-      nss: noNss ? '' : document.getElementById('reg-nss').value.trim(),
-      bloodType: document.getElementById('reg-blood').value,
-      allergies: document.getElementById('reg-allergies').value.trim() || 'Ninguna registrada',
-      history: document.getElementById('reg-history').value.trim() || 'Ninguno registrado',
-      emergency: {
-        name: document.getElementById('reg-ec-name').value.trim(),
-        relation: document.getElementById('reg-ec-relation').value.trim(),
-        phone: document.getElementById('reg-ec-phone').value.trim()
-      }
-    };
-
-    try{
-      const { token, user } = await api('/api/auth/register', {
-        method: 'POST',
-        body: JSON.stringify(payload)
-      });
-      setToken(token);
-      currentUser = user;
-      document.getElementById('form-register').reset();
-      resetRegisterWizard();
-      enterApp();
-      showToast('¡Cuenta creada! Bienvenido(a) a Heal Tracker.', 'primary');
-    }catch(err){
-      errorBox.innerHTML = '<div class="form-error">' + err.message + '</div>';
-    }
-  }
-
-  function navigate(view){
-    ['home','citas','hidratacion','mapa','perfil'].forEach(v=>{
-      document.getElementById('view-'+v).hidden = (v !== view);
+async function handleLogin(e){
+  e.preventDefault();
+  const email = document.getElementById('login-email').value.trim().toLowerCase();
+  const pass = document.getElementById('login-pass').value;
+  const errorBox = document.getElementById('login-error');
+  errorBox.innerHTML = '';
+  try{
+    const { token, user } = await api('/api/auth/login', {
+      method: 'POST',
+      body: JSON.stringify({ email, password: pass })
     });
-    document.querySelectorAll('.nav-item[data-view], .bottomnav button[data-view]').forEach(btn=>{
-      btn.classList.toggle('active', btn.dataset.view === view);
-    });
-    if(view === 'home') renderHome();
-    if(view === 'citas') renderCitas();
-    if(view === 'hidratacion') renderHidratacion();
-    if(view === 'perfil') renderPerfil();
-    window.scrollTo({top:0, behavior:'auto'});
-  }
-
-  async function refreshUser(){
-    const { user } = await api('/api/me');
+    setToken(token);
     currentUser = user;
-    return user;
+    enterApp();
+  }catch(err){
+    errorBox.innerHTML = '<div class="form-error">' + err.message + '</div>';
+  }
+}
+
+function enterApp(){
+  document.getElementById('screen-welcome').hidden = true;
+  document.getElementById('screen-app').hidden = false;
+  navigate('home');
+  startWaterReminders();
+  startMedChecks();
+}
+
+async function handleLogout(){
+  try{ await api('/api/auth/logout', { method: 'POST' }); }catch(e){ /* si falla, igual salimos localmente */ }
+  clearToken();
+  currentUser = null;
+  clearInterval(waterTimer);
+  clearInterval(medCheckTimer);
+  document.getElementById('screen-app').hidden = true;
+  document.getElementById('screen-welcome').hidden = false;
+  document.getElementById('form-login').reset();
+  showAuthTab('login');
+}
+
+/* ---------------- REGISTRO (multi-paso) ---------------- */
+function toggleNSS(){
+  const noNss = document.getElementById('reg-no-nss').checked;
+  const nssInput = document.getElementById('reg-nss');
+  nssInput.disabled = noNss;
+  if(noNss) nssInput.value='';
+}
+
+function regChangeStep(dir){
+  const steps = document.querySelectorAll('.reg-step');
+  const errorBox = document.getElementById('register-error');
+  errorBox.innerHTML = '';
+
+  if(dir === 1){
+    const currentStepEl = document.querySelector('.reg-step[data-step="'+regStep+'"]');
+    const inputs = currentStepEl.querySelectorAll('input[required], select[required]');
+    for(const inp of inputs){
+      if(!inp.value){
+        errorBox.innerHTML = '<div class="form-error">Por favor completa los campos marcados antes de continuar.</div>';
+        inp.focus();
+        return;
+      }
+    }
   }
 
-  function renderHome(){
-    const u = currentUser;
-    document.getElementById('home-greeting').textContent = 'Hola, ' + u.fullName.split(' ')[0];
+  regStep += dir;
+  if(regStep < 1) regStep = 1;
+  if(regStep > 3) regStep = 3;
 
-    const pct = Math.min(u.water.count / u.water.goal, 1);
-    const circumference = 515;
-    document.getElementById('ring-water').setAttribute('stroke-dashoffset', circumference - (circumference*pct));
-    document.getElementById('ring-water-label').textContent = u.water.count + '/' + u.water.goal;
-    document.getElementById('home-water-text').textContent = u.water.count + ' de ' + u.water.goal + ' vasos hoy';
+  steps.forEach(s => s.hidden = (parseInt(s.dataset.step) !== regStep));
+  document.querySelectorAll('.step-dot').forEach(d => d.classList.toggle('active', parseInt(d.dataset.step) === regStep));
+  document.getElementById('reg-back-btn').hidden = regStep === 1;
+  document.getElementById('reg-next-btn').hidden = regStep === 3;
+  document.getElementById('reg-submit-btn').hidden = regStep !== 3;
+}
 
-    const pendingMeds = u.meds.filter(m=>!m.takenToday);
-    document.getElementById('home-next-med').textContent = pendingMeds.length
-            ? pendingMeds[0].name + ' — ' + pendingMeds[0].time
-            : 'Sin medicamentos pendientes';
+function resetRegisterWizard(){
+  regStep = 1;
+  document.querySelectorAll('.reg-step').forEach(s => s.hidden = parseInt(s.dataset.step) !== 1);
+  document.querySelectorAll('.step-dot').forEach(d => d.classList.toggle('active', parseInt(d.dataset.step) === 1));
+  document.getElementById('reg-back-btn').hidden = true;
+  document.getElementById('reg-next-btn').hidden = false;
+  document.getElementById('reg-submit-btn').hidden = true;
+}
 
-    const upcoming = u.appointments.filter(a=>a.status==='upcoming').sort((a,b)=> new Date(a.date+'T'+a.time) - new Date(b.date+'T'+b.time));
-    document.getElementById('home-next-appt').textContent = upcoming.length
-            ? upcoming[0].specialty + ' — ' + formatDate(upcoming[0].date) + ' ' + upcoming[0].time
-            : 'Sin citas próximas';
+async function handleRegisterSubmit(e){
+  e.preventDefault();
+  const errorBox = document.getElementById('register-error');
+  errorBox.innerHTML = '';
+  const noNss = document.getElementById('reg-no-nss').checked;
+
+  const payload = {
+    fullName: document.getElementById('reg-name').value.trim(),
+    phone: document.getElementById('reg-phone').value.trim(),
+    email: document.getElementById('reg-email').value.trim().toLowerCase(),
+    password: document.getElementById('reg-pass').value,
+    nss: noNss ? '' : document.getElementById('reg-nss').value.trim(),
+    bloodType: document.getElementById('reg-blood').value,
+    allergies: document.getElementById('reg-allergies').value.trim() || 'Ninguna registrada',
+    history: document.getElementById('reg-history').value.trim() || 'Ninguno registrado',
+    emergency: {
+      name: document.getElementById('reg-ec-name').value.trim(),
+      relation: document.getElementById('reg-ec-relation').value.trim(),
+      phone: document.getElementById('reg-ec-phone').value.trim()
+    }
+  };
+
+  try{
+    const { token, user } = await api('/api/auth/register', {
+      method: 'POST',
+      body: JSON.stringify(payload)
+    });
+    setToken(token);
+    currentUser = user;
+    document.getElementById('form-register').reset();
+    resetRegisterWizard();
+    enterApp();
+    showToast('¡Cuenta creada! Bienvenido(a) a Heal Tracker.', 'primary');
+  }catch(err){
+    errorBox.innerHTML = '<div class="form-error">' + err.message + '</div>';
   }
+}
 
-  function formatDate(iso){
-    const [y,m,d] = iso.split('-');
-    const meses = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
-    return d + ' ' + meses[parseInt(m)-1] + ' ' + y;
-  }
+/* ---------------- NAVEGACIÓN ---------------- */
+function navigate(view){
+  ['home','citas','hidratacion','mapa','perfil'].forEach(v=>{
+    document.getElementById('view-'+v).hidden = (v !== view);
+  });
+  document.querySelectorAll('.nav-item[data-view], .bottomnav button[data-view]').forEach(btn=>{
+    btn.classList.toggle('active', btn.dataset.view === view);
+  });
+  if(view === 'home') renderHome();
+  if(view === 'citas') renderCitas();
+  if(view === 'hidratacion') renderHidratacion();
+  if(view === 'perfil') renderPerfil();
+  window.scrollTo({top:0, behavior:'auto'});
+}
 
-  function renderCitas(){
-    const u = currentUser;
-    const upcoming = u.appointments.filter(a=>a.status==='upcoming').sort((a,b)=> new Date(a.date+'T'+a.time) - new Date(b.date+'T'+b.time));
-    const past = u.appointments.filter(a=>a.status==='past').sort((a,b)=> new Date(b.date+'T'+b.time) - new Date(a.date+'T'+a.time));
+async function refreshUser(){
+  const { user } = await api('/api/me');
+  currentUser = user;
+  return user;
+}
 
-    document.getElementById('citas-proximas').innerHTML = upcoming.length ? upcoming.map(citaHTML).join('') :
-            '<p class="hint">No tienes citas agendadas. Usa el botón "Agendar cita" para crear una.</p>';
-    document.getElementById('citas-historial').innerHTML = past.length ? past.map(citaHTML).join('') :
-            '<p class="hint">Aún no tienes historial de citas pasadas.</p>';
-  }
+/* ---------------- INICIO ---------------- */
+function renderHome(){
+  const u = currentUser;
+  document.getElementById('home-greeting').textContent = 'Hola, ' + u.fullName.split(' ')[0];
 
-  function citaHTML(c){
-    const badge = c.status==='upcoming' ? '<span class="badge badge-upcoming">Próxima</span>' : '<span class="badge badge-past">Realizada</span>';
-    return `<div class="list-item">
+  const pct = Math.min(u.water.count / u.water.goal, 1);
+  const circumference = 515;
+  document.getElementById('ring-water').setAttribute('stroke-dashoffset', circumference - (circumference*pct));
+  document.getElementById('ring-water-label').textContent = u.water.count + '/' + u.water.goal;
+  document.getElementById('home-water-text').textContent = u.water.count + ' de ' + u.water.goal + ' vasos hoy';
+
+  const pendingMeds = u.meds.filter(m=>!m.takenToday);
+  document.getElementById('home-next-med').textContent = pendingMeds.length
+    ? pendingMeds[0].name + ' — ' + pendingMeds[0].time
+    : 'Sin medicamentos pendientes';
+
+  const upcoming = u.appointments.filter(a=>a.status==='upcoming').sort((a,b)=> new Date(a.date+'T'+a.time) - new Date(b.date+'T'+b.time));
+  document.getElementById('home-next-appt').textContent = upcoming.length
+    ? upcoming[0].specialty + ' — ' + formatDate(upcoming[0].date) + ' ' + upcoming[0].time
+    : 'Sin citas próximas';
+}
+
+function formatDate(iso){
+  const [y,m,d] = iso.split('-');
+  const meses = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  return d + ' ' + meses[parseInt(m)-1] + ' ' + y;
+}
+
+/* ---------------- CITAS ---------------- */
+function renderCitas(){
+  const u = currentUser;
+  const upcoming = u.appointments.filter(a=>a.status==='upcoming').sort((a,b)=> new Date(a.date+'T'+a.time) - new Date(b.date+'T'+b.time));
+  const past = u.appointments.filter(a=>a.status==='past').sort((a,b)=> new Date(b.date+'T'+b.time) - new Date(a.date+'T'+a.time));
+
+  document.getElementById('citas-proximas').innerHTML = upcoming.length ? upcoming.map(citaHTML).join('') :
+    '<p class="hint">No tienes citas agendadas. Usa el botón "Agendar cita" para crear una.</p>';
+  document.getElementById('citas-historial').innerHTML = past.length ? past.map(citaHTML).join('') :
+    '<p class="hint">Aún no tienes historial de citas pasadas.</p>';
+}
+
+function citaHTML(c){
+  const badge = c.status==='upcoming' ? '<span class="badge badge-upcoming">Próxima</span>' : '<span class="badge badge-past">Realizada</span>';
+  return `<div class="list-item">
     <div>
       <strong>${c.specialty}</strong>
       <div class="meta">${formatDate(c.date)} · ${c.time} ${c.doctor ? '· '+c.doctor : ''}</div>
       <div class="meta">${c.place || ''} ${c.notes ? '· '+c.notes : ''}</div>
     </div>
-    <div style="display:flex;align-items:center;gap:.5rem;">
-      ${badge}
-      <button class="btn-text" style="color:var(--danger);padding:.2rem;text-decoration:none;" onclick="borrarCita('${c.id}')" title="Eliminar cita">🗑️</button>
-    </div>
+    ${badge}
   </div>`;
+}
+
+async function guardarCita(e){
+  e.preventDefault();
+  const payload = {
+    specialty: document.getElementById('cita-especialidad').value,
+    doctor: document.getElementById('cita-doctor').value,
+    date: document.getElementById('cita-fecha').value,
+    time: document.getElementById('cita-hora').value,
+    place: document.getElementById('cita-lugar').value,
+    notes: document.getElementById('cita-notas').value
+  };
+  try{
+    await api('/api/appointments', { method: 'POST', body: JSON.stringify(payload) });
+    await refreshUser();
+    closeModal('modal-nueva-cita');
+    document.querySelector('#modal-nueva-cita form').reset();
+    renderCitas();
+    renderHome();
+    showToast('Cita agendada correctamente.', 'primary');
+  }catch(err){
+    showToast(err.message, 'accent');
   }
+}
 
-  async function guardarCita(e){
-    e.preventDefault();
-    const payload = {
-      specialty: document.getElementById('cita-especialidad').value,
-      doctor: document.getElementById('cita-doctor').value,
-      date: document.getElementById('cita-fecha').value,
-      time: document.getElementById('cita-hora').value,
-      place: document.getElementById('cita-lugar').value,
-      notes: document.getElementById('cita-notas').value
-    };
-    try{
-      await api('/api/appointments', { method: 'POST', body: JSON.stringify(payload) });
-      await refreshUser();
-      closeModal('modal-nueva-cita');
-      document.querySelector('#modal-nueva-cita form').reset();
-      renderCitas();
-      renderHome();
-      showToast('Cita agendada correctamente.', 'primary');
-    }catch(err){
-      showToast(err.message, 'accent');
-    }
-  }
+/* ---------------- HIDRATACIÓN Y MEDICAMENTOS ---------------- */
+function renderHidratacion(){
+  const u = currentUser;
+  document.getElementById('water-count-big').textContent = u.water.count + ' / ' + u.water.goal + ' vasos';
+  document.getElementById('water-interval').value = u.water.intervalMinutes;
 
-  async function borrarCita(id) {
-    if (!confirm('¿Estás seguro de que deseas eliminar esta cita?')) return;
-    try {
-      await api('/api/appointments/' + id, { method: 'DELETE' });
-      await refreshUser();
-      renderCitas();
-      renderHome();
-      showToast('Cita eliminada.', 'primary');
-    } catch (err) {
-      showToast(err.message, 'accent');
-    }
-  }
-
-  function renderHidratacion(){
-    const u = currentUser;
-    document.getElementById('water-count-big').textContent = u.water.count + ' / ' + u.water.goal + ' vasos';
-    document.getElementById('water-interval').value = u.water.intervalMinutes;
-
-    document.getElementById('meds-lista').innerHTML = u.meds.length ? u.meds.map(m => `
+  document.getElementById('meds-lista').innerHTML = u.meds.length ? u.meds.map(m => `
     <div class="list-item">
       <div>
         <strong>${m.name}</strong>
         <div class="meta">${m.dose || ''} · ${m.time} · ${m.frequency==='daily' ? 'Todos los días' : 'Una vez'}</div>
       </div>
-      <div style="display:flex;align-items:center;gap:.5rem;">
-        <span class="badge badge-med">${m.takenToday ? 'Tomado hoy' : 'Pendiente'}</span>
-        <button class="btn-text" style="color:var(--danger);padding:.2rem;text-decoration:none;" onclick="borrarMedicamento('${m.id}')" title="Eliminar medicamento">🗑️</button>
-      </div>
+      <span class="badge badge-med">${m.takenToday ? 'Tomado hoy' : 'Pendiente'}</span>
     </div>
   `).join('') : '<p class="hint">Aún no tienes medicamentos registrados.</p>';
-  }
+}
 
-  async function addWater(){
-    try{
-      await api('/api/water/add', { method: 'POST' });
-      await refreshUser();
-      renderHidratacion();
-      renderHome();
-      if(currentUser.water.count === currentUser.water.goal) showToast('¡Meta de hidratación cumplida hoy! 💧', 'primary');
-    }catch(err){
-      showToast(err.message, 'accent');
-    }
+async function addWater(){
+  try{
+    await api('/api/water/add', { method: 'POST' });
+    await refreshUser();
+    renderHidratacion();
+    renderHome();
+    if(currentUser.water.count === currentUser.water.goal) showToast('¡Meta de hidratación cumplida hoy! 💧', 'primary');
+  }catch(err){
+    showToast(err.message, 'accent');
   }
+}
 
-  async function setWaterInterval(mins){
-    try{
-      await api('/api/water/interval', { method: 'PUT', body: JSON.stringify({ minutes: parseInt(mins) }) });
-      await refreshUser();
-      startWaterReminders();
-      showToast('Te recordaremos tomar agua cada ' + (mins>=60 ? (mins/60)+' hora(s)' : mins+' minutos') + '.', 'primary');
-    }catch(err){
-      showToast(err.message, 'accent');
-    }
+async function setWaterInterval(mins){
+  try{
+    await api('/api/water/interval', { method: 'PUT', body: JSON.stringify({ minutes: parseInt(mins) }) });
+    await refreshUser();
+    startWaterReminders();
+    showToast('Te recordaremos tomar agua cada ' + (mins>=60 ? (mins/60)+' hora(s)' : mins+' minutos') + '.', 'primary');
+  }catch(err){
+    showToast(err.message, 'accent');
   }
+}
 
-  function startWaterReminders(){
-    clearInterval(waterTimer);
-    const ms = currentUser.water.intervalMinutes * 60 * 1000;
-    waterTimer = setInterval(()=>{
-      if(!currentUser) return;
-      showToast('💧 Es momento de tomar un vaso de agua.', 'accent');
-    }, ms);
+function startWaterReminders(){
+  clearInterval(waterTimer);
+  const ms = currentUser.water.intervalMinutes * 60 * 1000;
+  waterTimer = setInterval(()=>{
+    if(!currentUser) return;
+    showToast('💧 Es momento de tomar un vaso de agua.', 'accent');
+  }, ms);
+}
+
+async function guardarMedicamento(e){
+  e.preventDefault();
+  const payload = {
+    name: document.getElementById('med-nombre').value,
+    dose: document.getElementById('med-dosis').value,
+    time: document.getElementById('med-hora').value,
+    frequency: document.getElementById('med-frecuencia').value
+  };
+  try{
+    await api('/api/meds', { method: 'POST', body: JSON.stringify(payload) });
+    await refreshUser();
+    closeModal('modal-nuevo-med');
+    document.querySelector('#modal-nuevo-med form').reset();
+    renderHidratacion();
+    renderHome();
+    showToast('Medicamento añadido. Te avisaremos a la hora indicada.', 'primary');
+  }catch(err){
+    showToast(err.message, 'accent');
   }
+}
 
-  async function guardarMedicamento(e){
-    e.preventDefault();
-    const payload = {
-      name: document.getElementById('med-nombre').value,
-      dose: document.getElementById('med-dosis').value,
-      time: document.getElementById('med-hora').value,
-      frequency: document.getElementById('med-frecuencia').value
-    };
-    try{
-      await api('/api/meds', { method: 'POST', body: JSON.stringify(payload) });
-      await refreshUser();
-      closeModal('modal-nuevo-med');
-      document.querySelector('#modal-nuevo-med form').reset();
-      renderHidratacion();
-      renderHome();
-      showToast('Medicamento añadido. Te avisaremos a la hora indicada.', 'primary');
-    }catch(err){
-      showToast(err.message, 'accent');
-    }
-  }
+function startMedChecks(){
+  clearInterval(medCheckTimer);
+  medCheckTimer = setInterval(async ()=>{
+    if(!currentUser) return;
+    const now = new Date();
+    const hhmm = String(now.getHours()).padStart(2,'0') + ':' + String(now.getMinutes()).padStart(2,'0');
+    currentUser.meds.forEach(m=>{
+      if(m.time === hhmm && !m.takenToday){
+        showToast('💊 Hora de tomar: ' + m.name + (m.dose ? ' ('+m.dose+')' : ''), 'accent');
+      }
+    });
+  }, 30000); // revisa cada 30s (demo). En producción, sería vía notificaciones push del sistema operativo.
+}
 
-  async function borrarMedicamento(id) {
-    if (!confirm('¿Estás seguro de que deseas eliminar este medicamento?')) return;
-    try {
-      await api('/api/meds/' + id, { method: 'DELETE' });
-      await refreshUser();
-      renderHidratacion();
-      renderHome();
-      showToast('Medicamento eliminado.', 'primary');
-    } catch (err) {
-      showToast(err.message, 'accent');
-    }
-  }
+/* ---------------- MAPA ---------------- */
+function buscarEnMapa(){
+  const q = document.getElementById('mapa-buscar').value.trim() || 'Ciudad de México';
+  const url = 'https://maps.google.com/maps?q=' + encodeURIComponent('farmacias y consultorios cerca de ' + q) + '&t=&z=13&ie=UTF8&iwloc=&output=embed';
+  document.getElementById('mapa-iframe').src = url;
+  renderClinicas(q);
+}
 
-  function startMedChecks(){
-    clearInterval(medCheckTimer);
-    medCheckTimer = setInterval(async ()=>{
-      if(!currentUser) return;
-      const now = new Date();
-      const hhmm = String(now.getHours()).padStart(2,'0') + ':' + String(now.getMinutes()).padStart(2,'0');
-      currentUser.meds.forEach(m=>{
-        if(m.time === hhmm && !m.takenToday){
-          showToast('💊 Hora de tomar: ' + m.name + (m.dose ? ' ('+m.dose+')' : ''), 'accent');
-        }
-      });
-    }, 30000);
-  }
-
-  function buscarEnMapa(){
-    const q = document.getElementById('mapa-buscar').value.trim() || 'Ciudad de México';
-    const url = 'https://maps.google.com/maps?q=' + encodeURIComponent('farmacias y consultorios cerca de ' + q) + '&t=&z=13&ie=UTF8&iwloc=&output=embed';
-    document.getElementById('mapa-iframe').src = url;
-    renderClinicas(q);
-  }
-
-  function renderClinicas(q){
-    q = q || 'tu zona';
-    const mock = [
-      { nombre: 'Farmacia Guadalajara', tipo: 'Farmacia', distancia: '0.4 km', horario: 'Abierto 24 horas' },
-      { nombre: 'Clínica Vida Sana', tipo: 'Consultorio médico general', distancia: '0.9 km', horario: '8:00 – 20:00' },
-      { nombre: 'Farmacias del Ahorro', tipo: 'Farmacia', distancia: '1.1 km', horario: 'Abierto 24 horas' },
-      { nombre: 'Consultorio Dental Sonrisas', tipo: 'Dentista', distancia: '1.6 km', horario: '9:00 – 18:00' }
-    ];
-    document.getElementById('clinicas-lista').innerHTML = mock.map(c => `
+function renderClinicas(q){
+  q = q || 'tu zona';
+  const mock = [
+    { nombre: 'Farmacia Guadalajara', tipo: 'Farmacia', distancia: '0.4 km', horario: 'Abierto 24 horas' },
+    { nombre: 'Clínica Vida Sana', tipo: 'Consultorio médico general', distancia: '0.9 km', horario: '8:00 – 20:00' },
+    { nombre: 'Farmacias del Ahorro', tipo: 'Farmacia', distancia: '1.1 km', horario: 'Abierto 24 horas' },
+    { nombre: 'Consultorio Dental Sonrisas', tipo: 'Dentista', distancia: '1.6 km', horario: '9:00 – 18:00' }
+  ];
+  document.getElementById('clinicas-lista').innerHTML = mock.map(c => `
     <div class="clinic-card">
       <div>
         <strong>${c.nombre}</strong>
@@ -1133,11 +1089,12 @@
       <button class="btn btn-outline" onclick="showToast('Abriendo indicaciones a ' + '${c.nombre.replace(/'/g,"")}' + '...', 'primary')">Cómo llegar</button>
     </div>
   `).join('');
-  }
+}
 
-  function renderPerfil(){
-    const u = currentUser;
-    document.getElementById('perfil-vista').innerHTML = `
+/* ---------------- PERFIL ---------------- */
+function renderPerfil(){
+  const u = currentUser;
+  document.getElementById('perfil-vista').innerHTML = `
     <div class="profile-field"><div class="k">Nombre completo</div><div class="v">${u.fullName}</div></div>
     <div class="profile-field"><div class="k">Teléfono</div><div class="v">${u.phone}</div></div>
     <div class="profile-field"><div class="k">Correo</div><div class="v">${u.email}</div></div>
@@ -1150,74 +1107,75 @@
       <div class="v">${u.emergency.name} (${u.emergency.relation}) · ${u.emergency.phone}</div>
     </div>
   `;
-    document.getElementById('perfil-form').hidden = true;
-    document.getElementById('perfil-vista').hidden = false;
+  document.getElementById('perfil-form').hidden = true;
+  document.getElementById('perfil-vista').hidden = false;
+  document.getElementById('perfil-edit-btn').textContent = 'Editar información';
+}
+
+function toggleEditProfile(){
+  const form = document.getElementById('perfil-form');
+  const vista = document.getElementById('perfil-vista');
+  const editing = !form.hidden;
+  if(editing){
+    form.hidden = true; vista.hidden = false;
     document.getElementById('perfil-edit-btn').textContent = 'Editar información';
+    return;
   }
+  const u = currentUser;
+  document.getElementById('p-name').value = u.fullName;
+  document.getElementById('p-phone').value = u.phone;
+  document.getElementById('p-email').value = u.email;
+  document.getElementById('p-nss').value = u.nss;
+  document.getElementById('p-blood').value = u.bloodType;
+  document.getElementById('p-allergies').value = u.allergies;
+  document.getElementById('p-history').value = u.history;
+  document.getElementById('p-ec-name').value = u.emergency.name;
+  document.getElementById('p-ec-relation').value = u.emergency.relation;
+  document.getElementById('p-ec-phone').value = u.emergency.phone;
 
-  function toggleEditProfile(){
-    const form = document.getElementById('perfil-form');
-    const vista = document.getElementById('perfil-vista');
-    const editing = !form.hidden;
-    if(editing){
-      form.hidden = true; vista.hidden = false;
-      document.getElementById('perfil-edit-btn').textContent = 'Editar información';
-      return;
+  vista.hidden = true; form.hidden = false;
+  document.getElementById('perfil-edit-btn').textContent = 'Ver información';
+}
+
+async function guardarPerfil(e){
+  e.preventDefault();
+  const payload = {
+    fullName: document.getElementById('p-name').value,
+    phone: document.getElementById('p-phone').value,
+    nss: document.getElementById('p-nss').value,
+    bloodType: document.getElementById('p-blood').value,
+    allergies: document.getElementById('p-allergies').value,
+    history: document.getElementById('p-history').value,
+    emergency: {
+      name: document.getElementById('p-ec-name').value,
+      relation: document.getElementById('p-ec-relation').value,
+      phone: document.getElementById('p-ec-phone').value
     }
-    const u = currentUser;
-    document.getElementById('p-name').value = u.fullName;
-    document.getElementById('p-phone').value = u.phone;
-    document.getElementById('p-email').value = u.email;
-    document.getElementById('p-nss').value = u.nss;
-    document.getElementById('p-blood').value = u.bloodType;
-    document.getElementById('p-allergies').value = u.allergies;
-    document.getElementById('p-history').value = u.history;
-    document.getElementById('p-ec-name').value = u.emergency.name;
-    document.getElementById('p-ec-relation').value = u.emergency.relation;
-    document.getElementById('p-ec-phone').value = u.emergency.phone;
-
-    vista.hidden = true; form.hidden = false;
-    document.getElementById('perfil-edit-btn').textContent = 'Ver información';
+  };
+  try{
+    await api('/api/me', { method: 'PUT', body: JSON.stringify(payload) });
+    await refreshUser();
+    renderPerfil();
+    renderHome();
+    showToast('Tu perfil se actualizó correctamente.', 'primary');
+  }catch(err){
+    showToast(err.message, 'accent');
   }
+}
 
-  async function guardarPerfil(e){
-    e.preventDefault();
-    const payload = {
-      fullName: document.getElementById('p-name').value,
-      phone: document.getElementById('p-phone').value,
-      nss: document.getElementById('p-nss').value,
-      bloodType: document.getElementById('p-blood').value,
-      allergies: document.getElementById('p-allergies').value,
-      history: document.getElementById('p-history').value,
-      emergency: {
-        name: document.getElementById('p-ec-name').value,
-        relation: document.getElementById('p-ec-relation').value,
-        phone: document.getElementById('p-ec-phone').value
-      }
-    };
-    try{
-      await api('/api/me', { method: 'PUT', body: JSON.stringify(payload) });
-      await refreshUser();
-      renderPerfil();
-      renderHome();
-      showToast('Tu perfil se actualizó correctamente.', 'primary');
-    }catch(err){
-      showToast(err.message, 'accent');
-    }
-  }
+/* ---------------- MODALES Y TOASTS ---------------- */
+function openModal(id){ document.getElementById(id).hidden = false; }
+function closeModal(id){ document.getElementById(id).hidden = true; }
+function openAdInfo(e){ e.preventDefault(); openModal('modal-ad-info'); }
 
-  function openModal(id){ document.getElementById(id).hidden = false; }
-  function closeModal(id){ document.getElementById(id).hidden = true; }
-  function openAdInfo(e){ e.preventDefault(); openModal('modal-ad-info'); }
-
-  function showToast(msg, type){
-    const wrap = document.getElementById('toast-wrap');
-    const el = document.createElement('div');
-    el.className = 'toast' + (type==='accent' ? ' accent' : '');
-    el.innerHTML = '<span style="flex:1;">'+msg+'</span><button aria-label="Cerrar aviso" onclick="this.parentElement.remove()">✕</button>';
-    wrap.appendChild(el);
-    setTimeout(()=>{ if(el.parentElement) el.remove(); }, 8000);
-  }
+function showToast(msg, type){
+  const wrap = document.getElementById('toast-wrap');
+  const el = document.createElement('div');
+  el.className = 'toast' + (type==='accent' ? ' accent' : '');
+  el.innerHTML = '<span style="flex:1;">'+msg+'</span><button aria-label="Cerrar aviso" onclick="this.parentElement.remove()">✕</button>';
+  wrap.appendChild(el);
+  setTimeout(()=>{ if(el.parentElement) el.remove(); }, 8000);
+}
 </script>
 </body>
 </html>
