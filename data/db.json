@@ -1,0 +1,136 @@
+{
+  "users": [
+    {
+      "id": "b3903175-0548-40de-89eb-5f40a363013e",
+      "email": "demo@healtracker.mx",
+      "passwordSalt": "bab312c0be2c0243749db0d03b9f9b54",
+      "passwordHash": "c231ebad0862c6086f01025b8b62d28941ab2147caa19387a43d48709b9f9fbfe85ff7201f3c27829734f769d76e7649a1c06ee7f22d79019b2c7dcee35d3928",
+      "token": "969242930bc20ba86b6542fbbabb6e47edfc72b6402eec19",
+      "fullName": "Ana Torres",
+      "phone": "55 1122 3344",
+      "nss": "",
+      "bloodType": "O+",
+      "allergies": "Penicilina",
+      "history": "Hipertensión controlada",
+      "emergency": {
+        "name": "Luis Torres",
+        "relation": "Esposo",
+        "phone": "55 9988 7766"
+      },
+      "appointments": [
+        {
+          "id": "c9586ad5-5ee2-4ef0-b16e-d1695c4c8bab",
+          "specialty": "Medicina general",
+          "doctor": "Dr. Ibarra",
+          "date": "2026-07-02",
+          "time": "10:00",
+          "place": "Clínica Vida Sana",
+          "notes": "Chequeo anual",
+          "status": "past"
+        },
+        {
+          "id": "573458ca-6006-40ff-8888-1b00777d7225",
+          "specialty": "Dentista",
+          "doctor": "Dra. Campos",
+          "date": "2026-09-10",
+          "time": "16:30",
+          "place": "Consultorio Dental Sonrisas",
+          "notes": "",
+          "status": "upcoming"
+        }
+      ],
+      "meds": [
+        {
+          "id": "b3aab79a-47cd-4e63-9daf-89897206811f",
+          "name": "Losartán 50mg",
+          "dose": "1 tableta",
+          "time": "08:00",
+          "frequency": "daily",
+          "takenToday": false
+        }
+      ],
+      "water": {
+        "count": 0,
+        "goal": 8,
+        "intervalMinutes": 60,
+        "lastReset": "2026-08-25"
+      },
+      "createdAt": "2026-08-25T20:09:22.296Z"
+    },
+    {
+      "id": "06fa3ab4-b60c-493e-81b6-e11d81df862d",
+      "email": "celisstepany@gmail.com",
+      "passwordSalt": "19619f0bd57be430f574b46cb8597cf7",
+      "passwordHash": "b179e1ef6ec54b71e289d6bc48141b290bfa785ca9da27b3aff2bfe7f878b1588e205c81fc82c27f83d495b59a382292163b82f50c00b4ad9b77df42e0d19902",
+      "token": "0fdc4f90b8a39002f4689db4ec637dcec7316f2979f99a75",
+      "fullName": "Stepany Celis Galindo",
+      "phone": "7775191815",
+      "nss": "",
+      "bloodType": "O-",
+      "allergies": "Almidón",
+      "history": "Hepatitis A",
+      "emergency": {
+        "name": "Said Brito",
+        "relation": "Primo",
+        "phone": "7774438635"
+      },
+      "appointments": [
+        {
+          "id": "e6f56546-1191-4d0b-9dba-e0c3e880c6a6",
+          "specialty": "Oncologia",
+          "doctor": "Elizabeth Rodriguez",
+          "date": "2026-08-30",
+          "time": "16:30",
+          "place": "IMSS, Cuernavaca ",
+          "notes": "Levar carnet y orden de estudios\nIr en ayunas ",
+          "status": "upcoming"
+        },
+        {
+          "id": "31f4a712-7584-4030-9490-e90440831ec5",
+          "specialty": "Medico Familiar ",
+          "doctor": "Julián Herrera",
+          "date": "2026-09-10",
+          "time": "08:30",
+          "place": "IMSS, Cuernavaca ",
+          "notes": "",
+          "status": "upcoming"
+        },
+        {
+          "id": "f7ba30e9-f0c6-431e-8c76-77184c340f0e",
+          "specialty": "Odontologo",
+          "doctor": "Harry Styles ",
+          "date": "2026-09-02",
+          "time": "16:10",
+          "place": "IMSS, Cuernavaca ",
+          "notes": "",
+          "status": "upcoming"
+        }
+      ],
+      "meds": [
+        {
+          "id": "55a25504-91d2-41b5-b702-e6e6970c3daf",
+          "name": "Metformina 500mg",
+          "dose": "1",
+          "time": "09:00",
+          "frequency": "daily",
+          "takenToday": false
+        },
+        {
+          "id": "a502db0f-ba48-4e94-bfb9-188cd316e7f8",
+          "name": "Insulina",
+          "dose": "7 u",
+          "time": "21:20",
+          "frequency": "daily",
+          "takenToday": false
+        }
+      ],
+      "water": {
+        "count": 4,
+        "goal": 8,
+        "intervalMinutes": 180,
+        "lastReset": "2026-08-25"
+      },
+      "createdAt": "2026-08-25T20:10:08.613Z"
+    }
+  ]
+}
